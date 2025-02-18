@@ -94,4 +94,12 @@ export const navItems = [
     url: "/contact",
     label: "Contact",
   },
+  {
+    url: "/about",
+    label: "About us",
+  },
+  {
+    url: "/privacy",
+    label: "Privacy",
+  },
 ];

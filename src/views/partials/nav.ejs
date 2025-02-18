@@ -1,0 +1,10 @@
+<header>
+    <nav class="primary">
+        <%navItems.forEach(btn=> { %>
+            <a href="<%= btn.url %>">
+                <%= btn.label%>
+            </a>
+
+            <% }); %>
+    </nav>
+</header>
