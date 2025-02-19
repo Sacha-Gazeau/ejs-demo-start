@@ -34,5 +34,6 @@ export const privacy = (req, res) => {
     navItems,
     title: "Privacy Policy",
     content: "Dinosaurs are protective of their privacy",
+    team: false,
   });
 };
