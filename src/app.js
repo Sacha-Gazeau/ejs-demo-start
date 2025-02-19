@@ -3,6 +3,7 @@ import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import path from "path";
 import { home, about, contact, privacy } from "./controllers/PageController.js";
+import { index, details } from "./controllers/DinoController.js";
 import { error } from "console";
 import { dinosaurs } from "./data/data.js";
 
@@ -23,7 +24,9 @@ app.get("/", home);
 app.get("/about", about);
 app.get("/contact", contact);
 app.get("/privacy", privacy);
-app.get("/dinosaurs", dinosaurs);
+
+app.get("/dinosaurs", index);
+app.get("/dinosaurs/:slug", details);
 
 // Page 404
 app.get("*", (req, res) => {

@@ -1,0 +1,21 @@
+<!-- {
+    id: 1,
+    isHerbivore: true,
+    name: "Edaphosaurus",
+    slug: "edaphosaurus",
+    image: "dino_01.png",
+    description:
+      "The Edaphosaurus is a herbivorous dinosaur that lived during the Carboniferous period.",
+  }, -->
+
+<% if(dinosaurs) {%>
+    <h3>Maak kennis met ons team:</h3>
+    <ul>
+        <%dinosaurs.forEach(dino=> { %>
+            <li>
+                <%- dino %>
+            </li>
+
+            <% }); %>
+    </ul>
+    <% } %>

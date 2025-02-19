@@ -1,7 +1,15 @@
-import { dinosaurs } from "../data/data.js";
+import { dinosaurs, navItems } from "../data/data.js";
 
-export const contact = (req, res) => {
-  res.render("pages/dinosaurs", {
+export const index = (req, res) => {
+  res.render("dinosaurs/dinosaurs", {
+    navItems,
+    dinosaurs,
+  });
+};
+
+export const details = (req, res) => {
+  res.render("dinosaurs/dinosaurs", {
+    navItems,
     dinosaurs,
   });
 };
