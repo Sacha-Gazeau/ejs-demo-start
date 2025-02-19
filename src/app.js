@@ -3,10 +3,9 @@ import express from "express";
 import expressLayouts from "express-ejs-layouts";
 import path from "path";
 import { home, about, contact, privacy } from "./controllers/PageController.js";
-import { index, details } from "./controllers/DinoController.js";
-import { error } from "console";
-import { dinosaurs } from "./data/data.js";
+import * as dinosaurs from "./controllers/DinoController.js";
 
+import helpers from "./utils/templateHelpers.js";
 // create an instance of express
 const app = express();
 
@@ -15,6 +14,7 @@ app.set("view engine", "ejs");
 app.set("layout", "layouts/main");
 app.set("views", path.resolve("src", "views"));
 
+Object.assign(app.locals, helpers);
 // serve static files from the public folder
 // they can be accessed from the root of the site (e.g. /assets/images/dino_07.png) 🦕
 app.use(express.static("public"));
